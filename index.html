@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amul Kool Rose — Interactive Experience</title>
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-glow" id="custom-cursor-glow"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="logo-animation">
+                <span class="brand-kool">KOOL</span>
+                <span class="brand-rose">ROSE</span>
+            </div>
+            <div class="loader-circle-wrap">
+                <svg class="loader-circle" viewBox="0 0 120 120">
+                    <circle class="bg" cx="60" cy="60" r="45"></circle>
+                    <circle class="progress" id="progress-bar" cx="60" cy="60" r="45"></circle>
+                </svg>
+                <div class="percentage" id="loader-percentage">0%</div>
+            </div>
+            <div class="loader-status">Preparing Liquid Rose...</div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo" data-sec="sec-hero">
+                <span class="logo-amul">AMUL</span>
+                <span class="logo-kool">KOOL</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active" data-sec="sec-hero">Home</a>
+                <a href="#" class="nav-link" data-sec="sec-swirl">The Swirl</a>
+                <a href="#" class="nav-link" data-sec="sec-bottle">The Bottle</a>
+                <a href="#" class="nav-link" data-sec="sec-benefits">Benefits</a>
+                <a href="#" class="nav-link highlight" data-sec="sec-cta">Order Now</a>
+            </nav>
+            <div class="header-actions">
+                <button class="sound-toggle muted" id="sound-toggle" title="Toggle Ambient Audio">
+                    <span class="sound-wave"></span>
+                    <span class="sound-wave"></span>
+                    <span class="sound-wave"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Interactive Canvas & Scroll Indicator -->
+    <div class="canvas-container">
+        <canvas id="scroll-canvas"></canvas>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </div>
+
+    <!-- Scroll Content Sections -->
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="sec-hero" class="scroll-section active-section">
+            <div class="section-content left-align">
+                <span class="tagline">Introducing</span>
+                <h1 class="main-title">Amul Kool <span class="text-gradient">Rose</span></h1>
+                <p class="description">Experience the refreshing fusion of pure milk and the delicate sweetness of real rose petals. A cooling sensation crafted to perfection.</p>
+                <div class="action-row">
+                    <a href="#" class="btn-primary scroll-to-btn btn-glow">Explore Now</a>
+                    <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Swirl -->
+        <section id="sec-swirl" class="scroll-section">
+            <div class="section-content right-align">
+                <span class="tagline">The Blend</span>
+                <h2 class="section-title">The Perfect <span class="text-gradient">Swirl</span></h2>
+                <p class="description">Every bottle is a product of slow, delicate blending, creating a smooth and creamy texture that swirls on your palate with rich rose flavor.</p>
+                <div class="feature-pills">
+                    <span class="pill">100% Natural Rose</span>
+                    <span class="pill">Rich Creamy Milk</span>
+                    <span class="pill">Slow Blended</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Bottle -->
+        <section id="sec-bottle" class="scroll-section">
+            <div class="section-content left-align">
+                <span class="tagline">The Design</span>
+                <h2 class="section-title">Elegance in a <span class="text-gradient">Bottle</span></h2>
+                <p class="description">Our iconic bottle is designed to keep your drink perfectly chilled while feeling premium in your hand. Elegant curves meet robust functionality.</p>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-num">200ml</span>
+                        <span class="stat-label">Volume</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Recyclable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Benefits -->
+        <section id="sec-benefits" class="scroll-section">
+            <div class="section-content center-align">
+                <span class="tagline">Why Kool Rose?</span>
+                <h2 class="section-title">Taste the <span class="text-gradient">Goodness</span></h2>
+                <p class="description">More than just a refreshing drink, Amul Kool Rose is packed with nutrients to keep you energized throughout the day.</p>
+                <div class="cards-container">
+                    <div class="info-card">
+                        <div class="icon">🌸</div>
+                        <h3>Pure Rose Essence</h3>
+                        <p>Made with natural rose extracts for an authentic scent and taste.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">🥛</div>
+                        <h3>Calcium Rich</h3>
+                        <p>High-quality pasteurized milk provides essential nutrients and energy.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">⚡</div>
+                        <h3>Instant Refreshment</h3>
+                        <p>Perfect for beating the heat and boosting your energy instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: CTA / Footer -->
+        <section id="sec-cta" class="scroll-section final-section">
+            <div class="section-content center-align">
+                <span class="tagline">Get Yours</span>
+                <h2 class="section-title">Ready to Experience <span class="text-gradient">Rose</span>?</h2>
+                <p class="description">Find Amul Kool Rose at your nearest Amul parlor or order online for instant delivery to your doorstep.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn-primary btn-glow">Order Online</a>
+                    <a href="#" class="btn-secondary">Find Store</a>
+                </div>
+                <footer class="site-footer">
+                    <p>&copy; 2026 Amul - Real Milk. Real Icecream. All rights reserved.</p>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <!-- Application Script -->
+    <script src="app.js" defer></script>
+</body>
+</html>
